@@ -1,0 +1,48 @@
+h1{
+    background-color: antiquewhite;/*taustavärv*/
+    color: brown;/*teksti värv*/
+    margin: 5%;
+
+}
+header, footer{
+    font-family: "Candara Light";
+    font-size: large;
+    width: 90%;
+    border: 4px dashed saddlebrown;/* dotterd, dashed, double, outlined*/
+    background-color: antiquewhite;/*taustavärv*/
+    border-radius: 10px;
+    padding: 1%; /*borderi ja teksti vahe*/
+}
+body{
+    background-color: khaki;/*taustavärv*/
+}
+main{
+    margin: 5%;
+    font-size: large;
+}
+nav ul{
+    list-style-type: none;
+    text-align: left;
+    margin: 5%;
+    padding: 0;
+    background-color: antiquewhite;
+}
+nav ul li{
+    display: inline-block;
+    padding: 1%;
+    margin: 1%;
+    color: brown;
+}
+nav a:hover{
+    background-color: cornsilk;
+    color: brown;
+}
+nav li a{
+    font-size: large;
+    font-family : cursive;
+    text-decoration: none;
+    padding : 10px;
+    border-right : 1px solid black;
+    border-bottom : 1px solid black;
+    border-radius: 120px;
+}
