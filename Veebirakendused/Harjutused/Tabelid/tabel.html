@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabelid HTML/CSS</title>
+    <link rel="stylesheet" href="tableStyle.css">
+</head>
+<body>
+<h1>Tabelid</h1>
+<table id="lihtne">
+  <caption>Lihtne värvitud tabel</caption>
+    <!--1 rida-->
+    <tr>
+      <td>A</td>
+      <td>B</td>
+    </tr>
+    <!--2 rida-->
+    <tr>
+        <td>C</td>
+        <td>D</td>
+    </tr>
+</table>
+<!--natuke keerulisem tabel-->
+<table id="keeruline1">
+    <caption>Vähe keerulisem tabel 1</caption>
+    <!--1 rida-->
+    <tr>
+        <!--row span ühendab read, praegu ainult 2-->
+        <td rowspan="2">A</td>
+        <td>B</td>
+    </tr>
+    <!--2 rida-->
+    <tr>
+        <td>C</td>
+    </tr>
+</table>
+
+<table id="keeruline2">
+    <caption>Vähe keerulisem tabel 2</caption>
+    <!--1 rida-->
+    <tr>
+        <td>A</td>
+        <td>B</td>
+    </tr>
+    <!--2 rida-->
+    <tr>
+        <td colspan="2">C</td>
+    </tr>
+</table>
+
+<table id="keeruline3">
+    <caption>Vähe keerulisem tabel 3</caption>
+    <!--1 rida-->
+    <tr>
+        <td>A</td>
+        <td colspan="3">B</td>
+    </tr>
+    <!--2 rida-->
+    <tr>
+        <td colspan="2">C</td>
+        <td rowspan="3">D</td>
+        <td rowspan="3">E</td>
+    </tr>
+    <tr>
+        <td>F</td>
+        <td>G</td>
+    </tr>
+    <tr>
+        <td colspan="2">I</td>
+    </tr>
+</table>
+
+<table id="keeruline4">
+    <caption>Vähe keerulisem tabel 4</caption>
+    <!--1 rida-->
+    <tr>
+      <td colspan="6"></td>
+    </tr>
+    <!--2 rida-->
+    <tr>
+       <td rowspan="4"></td>
+        <td colspan="4"></td>
+        <td rowspan="5"></td>
+    </tr>
+    <!--3 rida-->
+    <tr>
+
+        <td rowspan="2"> </td>
+        <td colspan="2"> </td>
+        <td rowspan="3"> </td>
+    </tr>
+    <!--4 rida-->
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <!--5 rida-->
+    <tr>
+        <td colspan="3"></td>
+    </tr>
+    <!--6 rida-->
+    <tr>
+        <td colspan="5"></td>
+    </tr>
+</table>
+<!--suvaline tabel-->
+<table id="keeruline5">
+    <caption>Suvaline 'keerulisem' rida</caption>
+    <!--joonis-Rasmus Kunnus-->
+    <!--1 rida-->
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <!--2 rida-->
+    <tr>
+        <td colspan="2">4</td>
+        <td>5</td>
+    </tr>
+    <!--3 rida-->
+    <tr>
+        <td rowspan="2">6</td>
+        <td colspan="2">7</td>
+    </tr>
+    <!--4 rida-->
+    <tr>
+        <td colspan="2">8</td>
+    </tr>
+    <!--5 rida-->
+    <tr>
+        <td>9</td>
+        <td rowspan="2">10</td>
+        <td rowspan="2">11</td>
+    </tr>
+    <!--6 rida-->
+    <tr>
+        <td>12</td>
+    </tr>
+</table>
+
+<table id="lisa">
+    <caption>Lisa ülesanne</caption>
+    <!--1 rida-->
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <!--2 rida-->
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <!--3 rida-->
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <!--4 rida-->
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <!--5 rida-->
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
