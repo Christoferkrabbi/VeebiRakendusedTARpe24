@@ -1,0 +1,88 @@
+<!doctype html><!--html5 deklareerimine-->
+<html lang="et">
+<head><!--tehniline osa-->
+  <meta charset="UTF-8">
+  <meta name="description" content="Veebirakenduste loomise veebilehe meedialeht">
+  <meta name="author" content="Christofer Krabbi">
+  <title>Christofer Krabbi Veebirakenduste leht</title>
+  <link rel="stylesheet" href="style.css">
+  <!--<link rel="icon" type="image/png" sizes="32x32" href="favicon_io//favicon-32x32.png">-->
+</head>
+<body>
+
+<!--html5 semantilised elemendid-->
+<header>
+  <h1>Christofer Krabbi Veebirakenduste leht</h1>
+  <!--navigeerimis menüü-->
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html">Kodu</a>
+      </li>
+      <li>
+        <a href="kontakt.html">Kontakt</a>
+      </li>
+      <li>
+        <a href="tood.html">Tehtud tööd</a>
+      </li>
+      <li>
+        <a href="uudised.html">Uudised</a>
+      </li>
+      <li>
+        <a href="meedia.html">Meedia</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="pildigalerii">
+    <h3>Pildigalerii</h3>
+    <div>
+      <img src="https://picsum.photos/300/300?random=1" alt="HTML5 logo" loading="lazy">
+      <img src="https://picsum.photos/300/300?random=2" alt="HTML5 logo" loading="lazy">
+      <img src="https://picsum.photos/300/300?random=3" alt="HTML5 logo" loading="lazy">
+      <img src="https://picsum.photos/300/300?random=4" alt="HTML5 logo" loading="lazy">
+      <img src="https://picsum.photos/300/300?random=5" alt="HTML5 logo" loading="lazy">
+      <img src="https://picsum.photos/300/300?random=6" alt="HTML5 logo" loading="lazy">
+    </div>
+  </section>
+
+  <section id="video">
+    <h3>Youtube video</h3>
+    <div>
+      <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/Xk2ZUeBZWbc?si=XMh1MVvEf3i3_sPK"
+              title="YouTube video player" frameborder="0" allow="accelerometer;
+              autoplay; clipboard-write; encrypted-media; gyroscope;
+              picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    </div>
+
+    <section id="audio">
+      <h3>Muusika</h3>
+      <div>
+        <iframe data-testid="embed-iframe" style="border-radius:12px"
+                src="https://open.spotify.com/embed/track/5bBRMFZIcL8DTpQZVZKRcV?utm_source=generator"
+                width="50%" height="352" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+        </iframe>
+      </div>
+  </section>
+
+  <section id="kaart">
+    <h3>Kaart</h3>
+    <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.2901332284735!2d24.702880541718898!3d59.41155510454161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469294f1bd8cb15b%3A0xc372ff05bb27e9f4!2sTallinna%20T%C3%B6%C3%B6stushariduskeskus!5e0!3m2!1set!2see!4v1757665557321!5m2!1set!2see"
+              width="600" height="450" style="border:0;" allowfullscreen=""
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+</main>
+
+<footer>
+  &copy;Christofer 2025
+</footer>
+</body>
+</html>
