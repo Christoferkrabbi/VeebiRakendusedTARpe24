@@ -1,0 +1,15 @@
+h1{
+
+}
+body{
+
+}
+div#ala{
+    background-color: navajowhite;
+    padding: 2%;
+    width: 30%;
+    height: 300px;
+    position: absolute;
+    left: 590px;
+    top: 50px;
+}
