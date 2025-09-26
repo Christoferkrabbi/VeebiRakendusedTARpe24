@@ -46,17 +46,19 @@
   <br>
   <label for="indeks">Postiindeks</label><br>
   <input type="number" name="indeks" id="indeks" min="5" max="5" pattern="^\d{5}$)" placeholder="nt 10111" required><br>
-  <label>(täpselt 5 numbrit; muster:^\d{5}$)</label>
+  <label>(täpselt 5 numbrit; muster:^\d{5}$)</label><br>
   <br>
-  <label for="riik">Riik</label>
-  <input type="text" id="riik" name="riik" >
-  
+  <label for="riik">Riik</label><br>
+  <select id="riik" name="riik">
+    <option value="eesti">Eesti</option>
+  </select>
+</fieldset>
+<fieldset>
+  <legend>Muu info</legend>
+  <label for="huvid">Huvialad</label><br>
+  <input type="checkbox" id="huvid" name="huvid">
+  </input>
 
-
-
-  
-  
-  
 </fieldset>
 </body>
 </html>
