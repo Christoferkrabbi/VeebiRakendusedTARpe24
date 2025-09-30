@@ -24,8 +24,8 @@
   <label for="naine">Naine</label>
   <input type="radio" name="sugu" id="mees">
   <label for="mees">Mees</label>
-  <input type="radio" name="sugu" id="muu">
-  <label for="muu">Muu</label>
+  <input type="radio" name="sugu" id="muusugu">
+  <label for="muusugu">Muu</label>
 </fieldset>
 <fieldset>
   <legend>Kontakt</legend>
@@ -46,17 +46,49 @@
   <br>
   <label for="indeks">Postiindeks</label><br>
   <input type="number" name="indeks" id="indeks" min="5" max="5" pattern="^\d{5}$)" placeholder="nt 10111" required><br>
-  <label>(täpselt 5 numbrit; muster:^\d{5}$)</label>
+  <label>(täpselt 5 numbrit; muster:^\d{5}$)</label><br>
   <br>
-  <label for="riik">Riik</label>
-  <input type="text" id="riik" name="riik" >
-  
-
-
-
-  
-  
-  
+  <label for="riik">Riik</label><br>
+  <select name="riik" id="riik" >
+    <option value="eesti">Eesti</option>
+  </select><br>
+  <label>(muutmatu väli)</label>
 </fieldset>
+
+<fieldset>
+  <legend>Muu info</legend>
+  <br>
+  <label>Huvialad</label><br>
+  <input type="checkbox" id="joonistamine" name="joonisatmine" required> Joonistamine
+  <input type="checkbox" id="laulmine" name="laulmine"required> Laulmine
+  <input type="checkbox" id="tantsimine" name="tantsimine" required> Tantsimine<br>
+  <input type="checkbox" id="kokkamine" name="kokkamine" required> Kokkamine
+  <input type="checkbox" id="muuhuvi" name="muuhuvi" required> Muu:
+  <input type="text" name="muutekst" id="muutekst" max="30" placeholder="täpsusta (kuni 30 märki" required><br>
+  <br>
+  <input type="url" name="veebileht" id="veebileht" placeholder="https://minuleht.ee"><br>
+  <label>(peab algama http:// või https://)</label><br>
+  <br>
+  <label for="color">Eelistatud teema värv</label><br>
+  <input type="color" name="color" id="color"><br>
+  <br>
+  <label for="file">Dokumendid</label><br>
+  <input type="file" name="file" id="file" accept=".pdf, .img, .png"><br>
+  <label>(lubada PDF ja pildid)</label><br>
+</fieldset>
+  <fieldset>
+    <legend>Nõustumine</legend>
+    <br>
+    <input type="checkbox" id="nõus" name="nõus" required> Kinnitan, et esitatud andmed on õiged ja luban nende<br>
+    töötlemist vastavalt kooli tingimustele.<br>
+    <br>
+  </fieldset>
+<br>
+<div align="center">
+<button type="submit">Saada</button>
+<button type="reset">Tühjenda</button>
+</div>
+<br>
+<br>
 </body>
 </html>
