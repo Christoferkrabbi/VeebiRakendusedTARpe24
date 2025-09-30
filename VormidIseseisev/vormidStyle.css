@@ -1,0 +1,33 @@
+body{
+    background-color: sienna;
+    color: gold;
+    margin: 10px;
+}
+input, button{
+    background-color: saddlebrown;
+    color:goldenrod;
+    border-color: darkgoldenrod;
+}
+input::placeholder{
+    color: goldenrod;
+}
+textarea::placeholder{
+    color: goldenrod;
+}
+select, textarea{
+    background-color: saddlebrown;
+    color:goldenrod;
+    border-color: darkgoldenrod;
+}
+fieldset{
+    border-right : 10px solid saddlebrown;
+    border-bottom : 10px solid saddlebrown;
+    border-left : 10px solid peru;
+    border-top : 10px solid peru;
+}
+legend{
+    background-color: sienna;
+    text-decoration: underline peru;
+}
+
+
