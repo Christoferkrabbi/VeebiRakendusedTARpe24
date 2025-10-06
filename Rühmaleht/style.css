@@ -1,0 +1,36 @@
+body{
+    background-color: peru;
+    bottom: 0;
+}
+
+div{
+    text-decoration: none;
+}
+tr{
+
+    height: 50px;
+
+}
+table{
+
+
+}
+td{
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    text-align: center;
+    background-color: saddlebrown;
+    color: gold;
+    font-weight: bold;
+    text-decoration: none;
+    width: 15%;
+    height: 15%;
+
+}
+a{
+    text-decoration: none;
+    color: goldenrod;
+}
+footer{
+    bottom: 0;
+}
