@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>vormist lugemine JS abil</title>
+    <script src="vormScript.js"></script>
+</head>
+<body>
+<h1>vormist lugemine JS abil</h1>
+<table border="1" width="50%">
+    <tr>
+        <td>
+            <label for="nimi">Sisesta nimi:</label>
+        </td>
+        <td>
+            <input type="text" placeholder="Eesnimi" id="nimi" oninput="nimelugemine()">
+            <!--brauseris F12 ja kontrollida consolis vigu-->
+            <input type="reset" value="Puhasta" onclick="puhasta()">
+        </td>
+        <td>
+            <div id="vastus">Vastusekoht</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="varv">Vali värv:</label>
+        </td>
+        <td>
+            <input type="color" id="varv" onchange="varvValik()">
+            <input type="button" value="Värvi" onclick="varvValik()">
+        </td>
+        <td id="vastus2">
+
+        </td>
+    </tr>
+    <tr>
+    <td>Tee oma valikud:</td>
+    <td>
+        <input type="radio" name="nagu" id="naerata" value="naerata" onclick="radioValik()">
+        <label for="naerata">Naerata</label>
+
+        <input type="radio" name="nagu" id="kurvasta" value="kurvasta" onclick="radioValik()">
+        <label for="kurvasta">Kurvasta</label>
+    </td>
+    <td>
+        <img src=" " id="pilt">
+        <div id="vastus3"></div>
+    </td>
+</tr>
+    <tr>
+        <td>
+            <label for="tuju">Hinda oma tuju hetkel:</label>
+        </td>
+    <td>
+        <input type="range" id="tuju" min="0" max="100" value="0" oninput="tujuSlider()">
+    </td>
+        <td>
+            <div id="vastus4"></div>
+        </td>
+</tr>
+    <tr>
+        <td>
+            <label for="kool">Vali oma unistuste kool</label>
+        </td>
+        <td>
+            <select name="kool" id="kool" onchange="kooliValik()">
+                <option value=""> vali...</option>
+                <option value="TTHK"> TTHK</option>
+                <option value="Polüteh"> Polüteh</option>
+                <option value="Taltech"> Taltech</option>
+                <option value="Techno"> Techno</option>
+            </select>
+        </td>
+        <td>
+            <div id="vastus5"></div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

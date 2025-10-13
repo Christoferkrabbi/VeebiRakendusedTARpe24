@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Õpilase Registreerumisvorm</title>
+</head>
+<body>
+<fieldset>
+  <legend>Isikuandmed</legend>
+<label for="nimi">Eesnimi</label><br>
+<input type="text" name="nimi" id="nimi" max="30" placeholder="nt Christofer" required><br>
+  <label>(kuni 30 märki;nõutud; placeholder: nt Christofer)</label><br>
+  <br>
+  <label for="perenimi">Perekonna nimi</label><br>
+<input type="text" name="perenimi" id="perenimi" max="30" placeholder="nt Krabbi" required><br>
+  <label>(kuni 30 märki;nõutud; placeholder: nt Krabbi)</label><br>
+  <br>
+  <label for="sünnikp">Sünnikuupäev</label><br>
+  <input type="date" name="sünnikp" id="sünnikp" min="1980-01-01" max="2025-12-31"  required><br>
+  <label>(min 1950-01-01: max 2025-12-31; vaikimisi 1980-01-01; nõutud)</label><br>
+  <br>
+
+  <input type="radio" name="sugu" id="naine">
+  <label for="naine">Naine</label>
+  <input type="radio" name="sugu" id="mees">
+  <label for="mees">Mees</label>
+  <input type="radio" name="sugu" id="muu">
+  <label for="muu">Muu</label>
+</fieldset>
+<fieldset>
+  <legend>Kontakt</legend>
+  <label for="email">E-post</label><br>
+  <input type="email" id="email" name="email" required placeholder="nt nimi@kool.ee"><br>
+  <label>(100 tähemärki; nõutud; placeholder: nt nimi@kool.ee</label><br>
+  <br>
+  <label for="telefon">Mobiiltelefon</label><br>
+  <input type="tel" id="telefon" name="telefon" placeholder="+372 51234567" pattern="\+372[0-9]{7,8}" required><br>
+  <label>(nõutav muster/pattern: \+372\s?\d{7,8}$)</label><br>
+  <br>
+  <label for="aadress">Aadress</label><br>
+  <textarea id="aadress" name="aadress" rows="4" cols="30" placeholder="Tänav, maja, korter"></textarea><br>
+  <br>
+  <label for="linn">Linn/asula</label><br>
+  <input type="text" id="linn" name="linn" max="30" placeholder="nt Tallinn" required><br>
+  <label>(kuni 30 märki; nõutav;placeholder:nt Tallinn)</label><br>
+  <br>
+  <label for="indeks">Postiindeks</label><br>
+  <input type="number" name="indeks" id="indeks" min="5" max="5" pattern="^\d{5}$)" placeholder="nt 10111" required><br>
+  <label>(täpselt 5 numbrit; muster:^\d{5}$)</label><br>
+  <br>
+  <label for="riik">Riik</label><br>
+  <select id="riik" name="riik">
+    <option value="eesti">Eesti</option>
+  </select>
+</fieldset>
+<fieldset>
+  <legend>Muu info</legend>
+  <label for="huvid">Huvialad</label><br>
+  <input type="checkbox" id="huvid" name="huvid">
+  </input>
+
+</fieldset>
+</body>
+</html>
