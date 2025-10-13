@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulaator</title>
+    <script src="veebiKalkulaator.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Kalkulaator</h1>
+<input type="radio" name="valik" id="kanamunad">
+<label for="kanamunad">kanamunad</label>
+<br>
+<input type="radio" name="valik" id="kana">
+<label for="kana">kana</label>
+<br>
+<input type="radio" name="valik" id="piim">
+<label for="piim">piim</label>
+<br>
+<input type="radio" name="valik" id="leib">
+<label for="leib">leib</label>
+<br>
+<input type="radio" name="valik" id="sai">
+<label for="sai">Sai</label>
+
+<h2>Mitu soovid osta?</h2>
+<label for="tk">Vali kogus</label>
+<input type="number" id="tk" min="1" max="100" value="1">
+<br>
+<button onclick="arvutaHind()">Arvuta</button>
+<div id="vastus2"></div>
+<img src="" alt="" id="pilt">
+
+
+</body>
+</html>
