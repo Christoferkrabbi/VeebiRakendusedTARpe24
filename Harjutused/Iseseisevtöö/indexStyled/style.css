@@ -1,0 +1,68 @@
+
+body{
+    padding: 10px;
+    background-color:antiquewhite;
+    border: 5px dashed lightgray ;
+}
+div{
+    padding: 30px;
+    border: 1px solid black ;
+    width: 50%;
+    background-color: white;
+}
+header{
+    font-size: large;
+    color: blueviolet;
+    text-align: right;
+    text-decoration: dotted;
+}
+
+p{
+font-size: larger;
+font-weight: bold;
+color: chocolate;
+}
+a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkcyan;
+    font-weight: lighter;
+    background-color: aquamarine;
+    border: 3px double greenyellow;
+    margin: 10px;
+}
+li{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: darkblue;
+    font-weight: bold;
+
+}
+ol{
+    background-color: hotpink;
+    border-radius: 30px;
+    border: 2px solid darkcyan;
+}
+ul{
+    background-color: darksalmon;
+    border-radius: 15px;
+    border: 2px dotted red;
+
+}
+h1{
+    color: blue;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+h2{
+     color: blue;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+h4{
+     color: blue;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+table{
+    background-color: burlywood;
+    padding: 30px;
+}
