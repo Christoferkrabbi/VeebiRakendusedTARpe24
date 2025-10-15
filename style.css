@@ -1,0 +1,162 @@
+h1{
+    background-color: antiquewhite;/*taustavärv*/
+    color: brown;/*teksti värv*/
+    margin: 3%;
+}
+header, footer{
+    font-family: "Candara Light";
+    font-size: medium;
+    width: 97%;
+    border: 4px dashed saddlebrown;/* dotterd, dashed, double, outlined*/
+    background-color: antiquewhite;/*taustavärv*/
+    border-radius: 10px;
+    padding: 1px; /*borderi ja teksti vahe*/
+}
+footer{
+    bottom: 0;
+    width: 95.5%;
+}
+body{
+    background-color: khaki;/*taustavärv*/
+}
+main{
+    margin: 1%;
+    font-size: medium;
+}
+nav ul{
+    list-style-type: none;
+    text-align: left;
+    margin: 5%;
+    padding: 0;
+    background-color: antiquewhite;
+}
+nav ul li{
+    display: inline-block;
+    padding: 1%;
+    margin: 1%;
+    color: brown;
+}
+nav a:hover{
+    background-color: cornsilk;
+    color: brown;
+}
+nav li a{
+    font-size: large;
+    font-family : cursive;
+    text-decoration: none;
+    padding : 10px;
+    border-right : 1px solid black;
+    border-bottom : 1px solid black;
+    border-radius: 120px;
+}
+/********************section************************************/
+
+section#osa1{
+    background-color: antiquewhite;
+    width: 60%;
+    border-right: 2pt solid saddlebrown;
+    border-bottom: 2pt solid saddlebrown;
+    border-radius: 20px;
+    padding: 1px;
+    margin-top: 10px;
+}
+section#osa1 h3{
+    text-align: center;
+    background-color: navajowhite;
+    border-radius: 60px;
+    padding: 2%;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+section#osa2{
+    display: inline-block;
+    background-color: antiquewhite;
+    width: 60%;
+    border-right: 2pt dotted saddlebrown;
+    border-bottom: 2pt dotted saddlebrown;
+    border-radius: 20px;
+    padding: 1%;
+    margin-top: 10px;
+}
+section#osa2 h3{
+    text-align: center;
+    background-color: navajowhite;
+    border-radius: 60px;
+    padding: 2%;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+section#osa3{
+    display: inline-block;
+    background-color: antiquewhite;
+    width: 60%;
+    border-right: 2pt double saddlebrown;
+    border-bottom: 2pt double saddlebrown;
+    border-radius: 20px;
+    padding: 1%;
+    margin-top: 10px;
+}
+section#osa3 h3{
+    text-align: center;
+    background-color: navajowhite;
+    border-radius: 60px;
+    padding: 2%;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+section#pildigalerii {
+align-content: center;
+    width: 100%;
+}
+
+section#pildigalerii h3{
+    text-align: center;
+    background-color: navajowhite;
+    border-radius: 60px;
+    padding: 1%;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+section#video {
+    align-content: center;
+    width: 50%;
+}
+
+section#video h3{
+    text-align: center;
+    background-color: navajowhite;
+    border-radius: 60px;
+    padding: 1%;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+section#audio {
+    width: 100%;
+}
+
+section#audio h3{
+    text-align: center;
+    background-color: navajowhite;
+    border-radius: 60px;
+    padding: 1%;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+section#kaart {
+    align-content: center;
+    width:100%;
+}
+
+section#kaart h3{
+    text-align: center;
+    background-color: navajowhite;
+    border-radius: 60px;
+    padding: 1%;
+    font-weight: bold;
+    font-variant: small-caps;
+}
