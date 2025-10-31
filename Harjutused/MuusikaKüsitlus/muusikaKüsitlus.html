@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Muusika küsitlus</title>
+    <script src="muusikaScript.js"></script>
+    <link rel="stylesheet" href="muusikaStyle.css">
+    
+</head>
+<body>
+    <h1>Muusika küsitlus</h1>
+    <form action="">
+    <fieldset>
+        <legend>Milliseid Muusikuid/ansambleid sina tead?</legend>
+        <input type="checkbox" name="ansambel" id="metsatoll" value="Metsatöll" onchange="valiAnsambel()">
+        <label for="metsatoll">Metsatöll</label>
+        <br>
+        <input type="checkbox" name="ansambel" id="curtnwall" value="Curt'n wall" onchange="valiAnsambel()" >
+        <label for="curtnwall">Curt'n wall</label>
+        <br>
+        <input type="checkbox" name="ansambel" id="metallica" value="Metallica" onchange="valiAnsambel()" >
+        <label for="metallica">Metallica</label>
+        <br>
+        <input type="checkbox" name="ansambel" id="a7x" value="Avenged Sevenfold" onchange="valiAnsambel()">
+        <label for="a7x">Avenged Sevenfold</label>
+        <br>
+        <input type="checkbox" name="ansambel" id="bestia" value="Bestia" onchange="valiAnsambel()">
+        <label for="bestia">Bestia</label>
+        <div id="vastus"></div>
+    </fieldset>
+    </form>
+
+   <form action="">
+    <fieldset>
+    <legend>mida arvad muusika kuulamisest koolis?</legend>
+    <br>
+    <textarea name="muusikaKuulamineKoolis" id="muusikakoolis" cols="30" rows="10" onchange="muusikaKoolis()"></textarea>
+    <br>
+    <div id="muusikaKoolisVastus"></div>
+    </fieldset>
+</form>
+
+   <form action="">
+    <fieldset>
+    <legend>Mitu tundi päevas kuulad sa muusikat?</legend>
+    <br>
+    <input type="range" name="muusikatPaevas" id="muusikatPaevas" onchange="muusikatPaevas()" value="0" max="24">
+    <div id="muusikatPaevasVastus"></div>
+    </fieldset>
+</form>
+
+ <form action="">
+    <fieldset>
+      <legend>Kas sa kuulad raadiot</legend>
+      <br>
+      <input type="radio" name="kuulabRaadiot?" id="jah" onclick="kuulabRaadiot()">
+      <label for="jah">Jah</label>
+
+      <input type="radio" name="kuulabRaadiot?" id="ei" onclick="eiKuulaRaadiot()">
+      <label for="ei">Ei</label>
+      <div id="kuulabRaadiotVastus"></div>
+    </fieldset>
+
+    <fieldset id="raadiojaamadKüsimus" class="hidden">
+      <legend>Milliseid raadiojaamu oskad nimetada</legend>
+      <input type="text" id="raadiojaamad" placeholder="Näiteks Sky Plus, Elmar...">
+    </fieldset>
+  </form>
+    
+
+  <form action="">
+    <fieldset>
+        <legend>Millist muusikat sa kõige rohkem kuulad?</legend>
+        <input type="radio" id="hiphop" name="muusikaStiilid" value="Hiphop" onchange="muusikaStiil()">
+        <label for="hiphop">Hiphop</label>
+        <input type="radio" id="rock" name="muusikaStiilid" value="Rock" onchange="muusikaStiil()">
+        <label for="rock">Rock</label>
+        <input type="radio" id="metal" name="muusikaStiilid" value="Metal" onchange="muusikaStiil()">
+        <label for="metal">Metal</label>
+        <input type="radio" id="rap" name="muusikaStiilid" value="Rap" onchange="muusikaStiil()">
+        <label for="rap">Rap</label>
+        <input type="radio" id="jazz" name="muusikaStiilid" value="Jazz" onchange="muusikaStiil()">
+        <label for="jazz">Jazz</label>
+
+        <div id="muusikaStiilVastus"></div>
+    </fieldset>
+</form>
+
+
+
+</form>
+
+</body>
+</html>
