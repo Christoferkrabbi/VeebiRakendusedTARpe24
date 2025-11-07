@@ -24,8 +24,8 @@
         <input type="checkbox" name="ansambel" id="a7x" value="Avenged Sevenfold" onchange="valiAnsambel()">
         <label for="a7x">Avenged Sevenfold</label>
         <br>
-        <input type="checkbox" name="ansambel" id="bestia" value="Bestia" onchange="valiAnsambel()">
-        <label for="bestia">Bestia</label>
+        <input type="checkbox" name="ansambel" id="pantera" value="Pantera" onchange="valiAnsambel()">
+        <label for="pantera">Pantera</label>
         <div id="vastus"></div>
     </fieldset>
     </form>
@@ -44,7 +44,7 @@
     <fieldset>
     <legend>Mitu tundi päevas kuulad sa muusikat?</legend>
     <br>
-    <input type="range" name="muusikatPaevas" id="muusikatPaevas" onchange="muusikatPaevas()" value="0" max="24">
+    <input type="range" name="muusikatpaevas" id="muusikatpaevas" onchange="muusikatPaevas()" value="0" max="24">
     <div id="muusikatPaevasVastus"></div>
     </fieldset>
 </form>
@@ -53,17 +53,18 @@
     <fieldset>
       <legend>Kas sa kuulad raadiot</legend>
       <br>
-      <input type="radio" name="kuulabRaadiot?" id="jah" onclick="kuulabRaadiot()">
+      <input type="radio" name="raadio" id="jah" value="jah" onclick="kuulabRaadiot()">
       <label for="jah">Jah</label>
 
-      <input type="radio" name="kuulabRaadiot?" id="ei" onclick="eiKuulaRaadiot()">
+      <input type="radio" name="raadio" id="ei" value="ei" onclick="kuulabRaadiot()">
       <label for="ei">Ei</label>
       <div id="kuulabRaadiotVastus"></div>
     </fieldset>
 
     <fieldset id="raadiojaamadKüsimus" class="hidden">
       <legend>Milliseid raadiojaamu oskad nimetada</legend>
-      <input type="text" id="raadiojaamad" placeholder="Näiteks Sky Plus, Elmar...">
+      <input type="text" id="raadiojaamaValikud" placeholder="Näiteks Sky Plus, Elmar...">
+      <div id="valikud"></div>
     </fieldset>
   </form>
     
@@ -85,6 +86,13 @@
         <div id="muusikaStiilVastus"></div>
     </fieldset>
 </form>
+
+<fieldset>
+    <legend>Nupud</legend>
+    <button id="saada" onclick="saada()">Saada</button>
+    <button id="puhasta" onclick="puhasta()">Puhasta</button>
+    <div id="kokkuvote"></div>
+</fieldset>
 
 
 

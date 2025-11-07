@@ -1,24 +1,20 @@
 //checkbox valikud
 function valiAnsambel() {
 
-    let metsatoll = document.getElementById("metsatoll");
-    let curtnwall = document.getElementById("curtnwall");
-    let metallica = document.getElementById("metallica");
-    let a7x = document.getElementById("a7x");
-    let bestia = document.getElementById("bestia");
-    let vastus = document.getElementById("vastus");
+     const checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+    const vastus = document.getElementById("vastus");
 
-    let valik = "";
+    let valikud = [];
 
-    if (metsatoll.checked) { valik += metsatoll.value + ", "}
-    if (curtnwall.checked) { valik += curtnwall.value + ", "}
-    if (metallica.checked) { valik += metallica.value + ", "}
-    if (a7x.checked) { valik += a7x.value  + ", "}
-    if (bestia.checked) { valik += bestia.value}
+    checkboxes.forEach(checkbox => {
+        valikud.push(checkbox.value);
+        localStorage.setItem(checkbox.value, true); //ainult true valikud
+    });
 
-    vastus.innerHTML = "Sinu valitud muusikud: " + valik;
+    vastus.innerHTML = "Sinu valitud muusikud: " + (valikud.length > 0 ? valikud.join(", ") : "mitte ühtegi");
     vastus.style.color = "green";
 }
+
 
 //textarea
 function muusikaKoolis() {
@@ -32,7 +28,7 @@ function muusikaKoolis() {
 //range
 function muusikatPaevas() {
 
-    let hours = document.getElementById("muusikatPaevas");
+    let hours = document.getElementById("muusikatpaevas");
     let muusikatPaevasVastus = document.getElementById("muusikatPaevasVastus");
 
     muusikatPaevasVastus.innerHTML = "Sa kuulad muusikat " + hours.value + " tundi päevas";
@@ -47,13 +43,13 @@ function kuulabRaadiot() {
 
     if (jah.checked) { document.getElementById("raadiojaamadKüsimus").classList.remove("hidden");
          kuulabRaadiotVastus.innerHTML = "Raadio kuulamine: jah"}
-    if (ei.checked) { document.getElementById("raadiojaamadKüsimus").classList.add("hidden");
+    else if (ei.checked) { document.getElementById("raadiojaamadKüsimus").classList.add("hidden");
         kuulabRaadiotVastus.innerHTML = "Raadio kuulamine: ei"}
     kuulabRaadiotVastus.style.color = "green";
 }
 function raadiojaamad() {
 
-    let raadiojaamaValik = document.getElementById("raadiojaamaValikud");
+    let raadiojaamaValik = document.getElementById("raadiojaamadValikud");
     let valikud = document.getElementById("valikud");
 
     valikud.innerHTML = "Sinu nimetatud jaamad: " + raadiojaamaValik.value;
@@ -63,84 +59,81 @@ function raadiojaamad() {
 function muusikaStiil() {
 
     let hiphop = document.getElementById("hiphop");
-    let rokk = document.getElementById("rokk");
+    let rock = document.getElementById("rock");
     let metal = document.getElementById("metal");
-    let beatbox = document.getElementById("beatbox");
-    let rapp = document.getElementById("rapp");
-    let dzass = document.getElementById("dzass");
+    let rap = document.getElementById("rap");
+    let jazz = document.getElementById("jazz");
     let muusikaStiilVastus = document.getElementById("muusikaStiilVastus");
 
     if (hiphop.checked) { muusikaStiilVastus.innerHTML = "Sinu vastus: " + hiphop.value}
-    if (rokk.checked) { muusikaStiilVastus.innerHTML = "Sinu vastus: " + rokk.value}
+    if (rokk.checked) { muusikaStiilVastus.innerHTML = "Sinu vastus: " + rock.value}
     if (metal.checked) { muusikaStiilVastus.innerHTML = "Sinu vastus: " + metal.value}
-    if (beatbox.checked) { muusikaStiilVastus.innerHTML = "Sinu vastus: " + beatbox.value}
-    if (rapp.checked) { muusikaStiilVastus.innerHTML = "Sinu vastus: " + rapp.value}
-    if (dzass.checked) { muusikaStiilVastus.innerHTML = "Sinu vastus: " + dzass.value}
+    if (rap.checked) { muusikaStiilVastus.innerHTML = "Sinu vastus: " + rap.value}
+    if (jazz.checked) { muusikaStiilVastus.innerHTML = "Sinu vastus: " + jazz.value}
     muusikaStiilVastus.style.color = "green";
 }
 
-function saada() {
+    function saada() {
 
-    let abba = document.getElementById("abba");
-    let the = document.getElementById("the");
-    let metsatoll = document.getElementById("metsatoll");
-    let bedwetters = document.getElementById("bedwetters");
-    let vastus = document.getElementById("vastus");
+    const kokkuvoteDiv = document.getElementById("kokkuvote");
 
-    let valik = "";
+    // Checkbox valikud
+    const valitudAnsamblid = [...document.querySelectorAll('input[type=checkbox][name="ansambel"]:checked')]
+        .map(checkbox => checkbox.value)
+        .join(", ") || "mitte ühtegi";
 
-    if (abba.checked) { valik += abba.value + ", "}
-    if (the.checked) { valik += the.value + ", "}
-    if (metsatoll.checked) { valik += metsatoll.value + ", "}
-    if (bedwetters.checked) { valik += bedwetters.value}
+    // Tekstiala
+    const arvamus = document.getElementById("muusikakoolis").value || "—";
 
-    let muusika = document.getElementById("muusika");
+    // Range
+    const tunnid = document.getElementById("muusikatpaevas").value || 0;
 
-    let hours = document.getElementById("muusikaTunnid");
+    // Raadio jah/ei
+   const kuulab = document.querySelector('input[name="raadio"]:checked');
+const kuulabText = kuulab ? kuulab.value : "ei";
 
-    let raadiojaamaValik = document.getElementById("raadiojaamaValikud");
 
-    let jah = document.getElementById("jah");
-    if (jah.checked) { let kuulabRaadiot = "ja" }
-    else { let kuulabRaadiot = "ei" }
+    // Raadiojaamad ainult siis kui jah
+   const jaamad = kuulabText === "jah"
+    ? (document.getElementById("raadiojaamaValikud").value || "—")
+    : "ei kuula";
 
-    let kokkuvoteDiv = document.getElementById("kokkuvote");
 
-    let kokkuvote = "Sinu valitud muusikud: " + valik +  "\n"
-        + "Sinu arvamus: " + muusika.value + "\n"
-        + "Sa kuulad muusikat " + hours.value + " tundi päevas" + "\n"
-        + "Kas sa kuulad raadiot: " + jah.value + "\n"
-        +  "Sinu nimetatud jaamad: " + raadiojaamaValik.value;
 
-    kokkuvoteDiv.innerHTML = kokkuvote;
+    // Muusika stiil
+    const stiil = document.querySelector('input[name="muusikaStiilid"]:checked');
+    const stiilText = stiil ? stiil.value : "—";
+
+    kokkuvoteDiv.innerHTML =
+        "Sinu valitud muusikud: " + valitudAnsamblid + "<br>" +
+        "Sinu arvamus muusikakoolist: " + arvamus + "<br>" +
+        "Sa kuulad muusikat " + tunnid + " tundi päevas<br>" +
+        "Kas sa kuulad raadiot: " + kuulabText + "<br>" +
+        "Sinu nimetatud jaamad: " + jaamad + "<br>" +
+        "Sinu muusikastiil: " + stiilText;
+
+    kokkuvoteDiv.style.color = "blue";
 }
 
-function puhasta() {
-    document.getElementById("abba").checked = false;
-    document.getElementById("the").checked = false;
-    document.getElementById("metsatoll").checked = false;
-    document.getElementById("bedwetters").checked = false;
+   function puhasta() {
 
-    document.getElementById("muusika").value = "";
+    // checkboxid ja radio
+    document.querySelectorAll('input[type=checkbox], input[type=radio]').forEach(input => {
+        input.checked = false;
+    });
+    //textiväljad
+    document.querySelectorAll('input[type=text], textarea').forEach(input => {
+        input.value = "";
+    });
 
-    document.getElementById("muusikaTunnid").value = "";
+    // range
+    const range = document.getElementById("muusikatpaevas");
+    if (range) range.value = 0;
 
-    document.getElementById("jah").checked = false;
-    document.getElementById("ei").checked = false;
+    // raadiojaama küsims
+    document.getElementById("raadiojaamadKüsimus").classList.add("hidden");
 
-    document.getElementById("raadiojaamaValikud").value = "";
-
-    document.getElementById("hiphop").checked = false;
-    document.getElementById("rokk").checked = false;
-    document.getElementById("metal").checked = false;
-    document.getElementById("beatbox").checked = false;
-    document.getElementById("rapp").checked = false;
-    document.getElementById("dzass").checked = false;
-
-    document.getElementById("vastus").innerHTML = "";
-    document.getElementById("muusikaKoolisVastus").innerHTML = "";
-    document.getElementById("muusikaPaevasVastus").innerHTML = "";
-    document.getElementById("kuulabRaadiotVastus").innerHTML = "";
-    document.getElementById("valikud").innerHTML = "";
-    document.getElementById("muusikaStiilVastus").innerHTML = "";
+    //vastused
+    document.querySelectorAll('#vastus, #muusikaKoolisVastus, #muusikatPaevasVastus, #kuulabRaadiotVastus, #valikud, #muusikaStiilVastus, #kokkuvote')
+        .forEach(el => el.innerHTML = "");
 }
