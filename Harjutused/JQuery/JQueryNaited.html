@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery näited</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function orange() {
+            $('#kirjeldus, h2').css('color', 'orange');
+        }
+        function black() {
+            $('#kirjeldus, h2').css('color', 'black');
+        }
+        function green() {
+            $('h2').css('color', 'green');
+        }
+        function koordinaadid(event, ui) {
+            let koht=ui.offset;
+            $('#koordinaadid').html('x: ' + koht.left + '|||  y: ' + koht.top);
+        }
+        function start() {
+            $('#kirjeldus').mouseenter(orange);
+            $('#kirjeldus').mouseleave(black);
+            $('h2').mouseleave(green);
+            $('#pilt').draggable();
+            $('#kirjeldus').draggable();
+            $('#pilt').bind("drag", koordinaadid);
+        }
+
+       /* <script>
+            $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+            $("p").show();
+        });
+        });
+        */
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+    </script>
+    </script>
+
+</head>
+<body onload="start()">
+<h2>JQuery Näited</h2>
+<div id="kirjeldus">
+    jQuery on JavaScripti teek, mis keskendub JavaScripti ja HTML-i vastastikusele mõjule.
+    jQuery raamistik võimaldab saada kergesti juurdepääsu ükskõik missugusele
+    DOM-elemendile, pöörduda DOM-elementide sisu ja atribuutide poole ning
+    nendega manipuleerida. Samuti pakub jQuery raamistik mugavat API-t AJAX-iga
+    töötamisel. Praegu arendab raamistikku jQuery meeskond, mille eesotsas on John Rezig.
+</div>
+<input type="button" value="paremale-->"
+       onclick="$('div#kirjeldus').animate({left: '500px'}, 1000)">
+<input type="button" value="<--vaskaule"
+       onclick="$('div#kirjeldus').animate({left: '0px'}, 1000)">
+<input type="button" value="Stopp"
+onclick="$('div#kirjeldus, #pilt').animate({left: '0px'}, 1000)">
+<input type="button" value="peida"
+onclick="$('div#kirjeldus, #pilt').hide(2000)">
+<input type="button" value="näita"
+onclick="$('div#kirjeldus, #pilt').show(2000, alert('näitan teksti ja pilti'))">
+
+<p>
+    Jquery CDN - kopeerime slim lingi...
+</p>
+<img src="picjachu.png" alt="pilt">
+<div id="koordinaadid"></div>
+
+<div id="flip">Click to slide the panel down or up</div>
+<div id="panel">Hello world!</div>
+</body>
+
+
+
+</html>
