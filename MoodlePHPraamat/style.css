@@ -1,0 +1,88 @@
+
+header {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
+body {
+    margin: 20px;
+    padding: 0;
+}
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 8px;
+}
+
+h2, p {
+    margin: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 5px;
+    padding: 0;
+    overflow: hidden;
+    background-color: yellow;
+    border: darkblue 3px solid;
+}
+
+ul li {
+    float: left;
+    margin: 5px;
+    border: darkblue 3px solid;
+}
+
+form{
+    border-radius: 10px;
+    border: solid 1px grey;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    background-color: cadetblue;
+}
+
+div{
+    color: darkblue;
+
+}
+div.flex-container {
+    display: flex;
+    /* Show the flex items horizontally */
+    flex-direction: row;
+
+}
+
+div.flex-container > div {
+    margin: 10px;
+    border: solid 1pt grey;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1;
+    background-color: yellow;
+    color: darkblue;
+}
+button{
+    margin: 10px;
+    border: solid 1pt grey;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1;
+    background-color: yellow;
+    color: darkblue;
+}
+
+/* Use media query and show the flex items vertically if screen width is less than 600px */
+@media screen and (max-width:600px) {
+    div.flex-container {
+        flex-direction: column;
+    }
+}
