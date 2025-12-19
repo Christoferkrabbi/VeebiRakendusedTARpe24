@@ -4,33 +4,35 @@
     <meta charset="UTF-8">
     <title>Kalkulaator</title>
     <script src="veebiKalkulaator.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 <h1>Kalkulaator</h1>
-<input type="radio" name="valik" id="kanamunad">
+<fieldset>
+    <legend>Vali toode</legend>
+<input type="radio" id="kanamunad" value="kanamunad" name="toode" onchange="Radio()" >
 <label for="kanamunad">kanamunad</label>
 <br>
-<input type="radio" name="valik" id="kana">
-<label for="kana">kana</label>
-<br>
-<input type="radio" name="valik" id="piim">
+<input type="radio" id="piim" value="piim" name="toode" onchange="Radio()">
 <label for="piim">piim</label>
 <br>
-<input type="radio" name="valik" id="leib">
+<input type="radio" id="leib" value="leib" name="toode" onchange="Radio()">
 <label for="leib">leib</label>
 <br>
-<input type="radio" name="valik" id="sai">
+<input type="radio" id="sai" value="sai" name="toode" onchange="Radio()">
 <label for="sai">Sai</label>
 
-<h2>Mitu soovid osta?</h2>
-<label for="tk">Vali kogus</label>
-<input type="number" id="tk" min="1" max="100" value="1">
-<br>
-<button onclick="arvutaHind()">Arvuta</button>
-<div id="vastus2"></div>
-<img src="" alt="" id="pilt">
+<h2> valitud toode:</h2>
+<img src="" alt="" id="valitudToode" width="100">
+</fieldset>
 
-
+<fieldset>
+<legend> Kogus </legend>
+    <br>
+<input type="number" id="number" onchange="">
+    <label for="number">Vali kogus:</label>
+    <input type="button" id="button" value="Arvuta" onclick="arvutaPiltHind()">
+    <div id="hindKokku"></div>
+</fieldset>
 </body>
 </html>
