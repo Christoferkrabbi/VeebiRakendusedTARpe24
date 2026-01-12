@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>   
+<meta charset="UTF-8">
+<title>random image</title>    
+<script> 
+function juhuslikPilt() 
+{   
+//massiiv   
+const pildid = [
+  "/wp/wp-content/uploads/2026/01/images/esimene.png",
+  "/wp/wp-content/uploads/2026/01/images/teine.png",
+  "/wp/wp-content/uploads/2026/01/images/kolmas.png",
+  "/wp/wp-content/uploads/2026/01/images/neljas.png",
+  "/wp/wp-content/uploads/2026/01/images/viies.png"
+]; 
+const randomPilt=document.getElementById('randomPilt');
+//Math.random()-juhuslik arv    
+//Math.floor - võtab arvust täisosa    
+//pildid.length - mitu pilti on massiivis    
+const juhuslikArv=Math.floor(Math.random()*pildid.length);    randomPilt.src=pildid[juhuslikArv];}
+
+function piltm6istatus()
+{ 
+let randomPilt=document.getElementById('randomPilt');    
+let vastus=document.getElementById('vastus');   
+let valik=document.getElementsByName('valik');    
+//mitu elementühe nimega valik   
+//tsükl for    
+for(let i=0;i<valik.length;i++){
+        if(valik[i].checked){
+            //radio nupust võetakse value mida võrdleme
+            if(randomPilt.getAttribute('src')==valik[i].value){
+                vastus.innerHTML="õige vastus!";
+            } else{
+                vastus.innerHTML="proovi uuesti";
+            }
+        }
+    }
+} 
+
+
+function arvuta(kogus, hind){   
+return (kogus*hind).toFixed(2);    
+//toFixed - ümardab 2 märgini peale koma}const pilt1Hind=5;
+}
+const pilt2Hind=6;
+const pilt3Hind=2.5;
+const pilt4Hind=3.5;
+const pilt5Hind=4;
+function arvutaPiltHind(){    
+let vastus2=document.getElementById('vastus2');    
+let tk=document.getElementById('tk');    
+let v1=document.getElementById('v1');    
+let v2=document.getElementById('v2');    
+let v3=document.getElementById('v3');    
+let v4=document.getElementById('v4');    
+let v5=document.getElementById('v5');    
+if(v1.checked){       
+vastus2.innerHTML=arvuta(tk.value, pilt1Hind)+" euro";    }    
+if(v2.checked){       
+vastus2.innerHTML=arvuta(tk.value, pilt2Hind)+" euro";    }   
+if(v3.checked){       
+vastus2.innerHTML=arvuta(tk.value, pilt3Hind)+" euro";    }    
+if(v4.checked){        
+vastus2.innerHTML=arvuta(tk.value, pilt4Hind)+" euro";   }    
+if(v5.checked){       
+vastus2.innerHTML=arvuta(tk.value, pilt5Hind)+" euro";    }} 
+</script>
+</head>
+<body onload="juhuslikPilt()">
+<h1>juhuslik pilt images-kautast</h1>
+<input type="button" value="Random pilt" onclick="juhuslikPilt()">
+<img src="" alt="" id="randomPilt">
+<h2>pilt mõistatus. vali mida näed pildil</h2>
+<input type="radio" name="valik" id="v1" value="/wp/wp-content/uploads/2026/01/images/esimene.png"
+onchange="piltm6istatus()"><br>
+<label for="v1">esimene</label>
+<input type="radio" name="valik" id="v2" value= "/wp/wp-content/uploads/2026/01/images/teine.png" 
+onchange="piltm6istatus()"><br>
+<label for="v2">teine</label><br>
+<input type="radio" name="valik" id="v3" value= "/wp/wp-content/uploads/2026/01/images/komas.png"
+onchange="piltm6istatus()"><br>
+<label for="v3">kolmas</label><br>
+<input type="radio" name="valik" id="v4" value= "/wp/wp-content/uploads/2026/01/images/neljas.png" 
+onchange="piltm6istatus()"><br>
+<label for="v4">neljas</label><br>
+<input type="radio" name="valik" id="v5" value= "/wp/wp-content/uploads/2026/01/images/viies.png"
+onchange="piltm6istatus()"><br>
+<label for="v5">viies</label><br>
+<div id="vastus"></div><br>
+<h2>Mitu pilti soovid osta?</h2><br>
+<label for="tk">Vali kogus</label><br>
+<input type="number" id="tk" min="0" max="100" value="0" onchange="arvutaPiltHind()"><br>><div id="vastus2"></div><br>
+</body>
+</html>
